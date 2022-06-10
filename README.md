@@ -1,44 +1,9 @@
-<p align="center">
-  <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
-</p>
+# Element Plus With UnoCSS
 
-<p align="center">
-  <a href="https://github.com/sxzz/element-plus-best-practices">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sxzz/element-plus-best-practices?style=social">
-  </a>
-  <a href="https://github.com/sxzz/element-plus-best-practices">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/sxzz/element-plus-best-practices?style=social">
-  </a>
-  <a href="https://996.icu">
-    <img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" />
-  </a>
-  <br>
-</p>
+> 参考<https://github.com/element-plus/element-plus-vite-starter>和<https://github.com/sxzz/element-plus-best-practices>配置进行优化搭建。
 
-# Element Plus Best Practices 最佳实践
+包含了自定义配色主题和各种自动导入。
 
-## Features
+但是我发现自动导入样式和组件，有时候好像样式会丢掉（频率很高）。插件用多了似乎并不是什么好事（虽然确实很方便）。如果你也发现了这种情况不要慌张，重启下VSCode试试看吧。
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
-
-- 📦 [Components auto importing](https://github.com/antfu/unplugin-auto-import)
-
-- 😃 [Element Plus Icons](https://github.com/antfu/unplugin-icons)
-
-- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
-
-- 🦾 TypeScript, of course
-
-- ESLInt & Prettier
-
-## Sponsors
-
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/sxzz/sponsors/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/sxzz/sponsors/sponsors.svg'/>
-  </a>
-</p>
-
-## License
-
-[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/sxzz)
+如果不需要自己配置主题，就把scss那些相关的预加载（ `vite.config.ts` ）和 `main.ts` 引用的样式移除吧。

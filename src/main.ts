@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import 'uno.css'
+import '@/styles/index.scss' // 如需自定义主题则请保留
+const app = createApp(App)
+app.mount('#app')

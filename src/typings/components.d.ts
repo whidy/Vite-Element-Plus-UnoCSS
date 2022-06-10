@@ -6,12 +6,9 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
-    ElInput: typeof import('element-plus/es')['ElInput']
+    ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
+    ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElSpace: typeof import('element-plus/es')['ElSpace']
-    IEpAddLocation: typeof import('~icons/ep/add-location')['default']
-    IEpAim: typeof import('~icons/ep/aim')['default']
-    IEpCircleCheckFilled: typeof import('~icons/ep/circle-check-filled')['default']
     Loading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }
