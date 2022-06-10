@@ -1,8 +1,9 @@
 {
-  "name": "element-plus-best-practices",
+  "name": "element-plus-with-unocss",
   "private": true,
   "packageManager": "pnpm@7.1.7",
   "scripts": {
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "dev": "vite",
     "build": "pnpm run typecheck && vite build",
     "typecheck": "vue-tsc --noEmit",
