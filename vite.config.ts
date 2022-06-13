@@ -65,15 +65,4 @@ export default defineConfig({
     }),
     Inspect(),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('element-plus/theme-chalk/')) {
-            return 'element-plus'
-          }
-        },
-      },
-    },
-  },
 })
