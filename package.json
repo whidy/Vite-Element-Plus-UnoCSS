@@ -1,8 +1,8 @@
 {
   "name": "vite-element-plus-unocss",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "packageManager": "pnpm@7.1.7",
+  "packageManager": "pnpm@7.2.1",
   "scripts": {
     "dev": "vite",
     "build": "pnpm run typecheck && vite build",
@@ -37,5 +37,6 @@
     "vite": "^2.9.12",
     "vite-plugin-inspect": "^0.5.0",
     "vue-tsc": "^0.37.5"
-  }
+  },
+  "license": "MIT"
 }
