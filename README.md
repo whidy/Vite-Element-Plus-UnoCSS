@@ -45,3 +45,5 @@ build: {
 ### 问题
 
 当然现在的问题是如何保持开发环境和生产环境效果一致。那么我还在进一步探索中。
+
+> 当然你完全可以不使用 `Tailwind CSS` 的 `reset` 来避免此问题的发生，这会**省下不少时间**。其他的reset可以参考[UnoCSS Reset](https://uno.antfu.me/?s=guide:reset)，比如个人推荐 `normalize.css` 和 `sanitize.css`
