@@ -1,9 +1,9 @@
 {
-  "name": "element-plus-with-unocss",
+  "name": "vite-element-plus-unocss",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@7.1.7",
   "scripts": {
-    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "dev": "vite",
     "build": "pnpm run typecheck && vite build",
     "typecheck": "vue-tsc --noEmit",
@@ -20,8 +20,9 @@
     "@iconify-json/mdi": "^1.1.19",
     "@sxzz/eslint-config-prettier": "^2.2.2",
     "@sxzz/eslint-config-vue": "^2.2.2",
-    "@types/node": "*",
+    "@types/node": "^17.0.41",
     "@unocss/preset-icons": "^0.38.2",
+    "@unocss/reset": "^0.38.2",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/runtime-core": "^3.2.37",
     "@vue/tsconfig": "^0.1.3",
@@ -33,8 +34,8 @@
     "unplugin-auto-import": "^0.8.7",
     "unplugin-icons": "^0.14.3",
     "unplugin-vue-components": "^0.19.6",
-    "vite": "^2.9.11",
+    "vite": "^2.9.12",
     "vite-plugin-inspect": "^0.5.0",
-    "vue-tsc": "^0.37.3"
+    "vue-tsc": "^0.37.5"
   }
 }

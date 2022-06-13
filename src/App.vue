@@ -9,7 +9,11 @@ const handleClick2 = () => {
 <template>
   <el-config-provider namespace="ep">
     <div h-full flex flex-col>
-      <h1>这是一个Demo!</h1>
+      <h1>
+        这是一个<a href="https://element-plus-with-unocss.netlify.app/"
+          >Demo!</a
+        >
+      </h1>
       <p>
         结合了<a
           href="https://github.com/element-plus/element-plus-vite-starter"
