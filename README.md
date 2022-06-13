@@ -12,7 +12,9 @@
 
 ## 备注
 
-开发模式下，暂时未能寻找到引入 `TailwindCSS` 的 `reset` 后，导致 `el-button` 的样式覆盖问题（同[Vite中ElementPlus和TailwindCSS最佳实践（一）](https://github.com/whidy/elementplus-tailwindcss-best-practice)），因为发现无法控制开发模式下的加载顺序。不过通过修改 `vite.config.ts` 中 `build` 部分达到避免（因为也许不用加也可以）生产环境下 `Element-Plus` 的样式文件在后面。部分配置代码：
+该Demo使用了 `Tailwind CSS` 的reset样式。
+
+开发模式下，暂时未能寻找到引入 `Tailwind CSS` 的 `reset` 后，导致 `el-button` 的样式覆盖问题（同[Vite中ElementPlus和TailwindCSS最佳实践（一）](https://github.com/whidy/elementplus-tailwindcss-best-practice)），因为发现无法控制开发模式下的加载顺序。不过通过修改 `vite.config.ts` 中 `build` 部分达到避免（因为也许不用加也可以）生产环境下 `Element-Plus` 的样式文件在后面。部分配置代码：
 
 ```js
 build: {
@@ -27,3 +29,19 @@ build: {
   },
 },
 ```
+
+可以对比[未添加build配置](https://62a6a9d8892e41000861d9e4--vite-element-plus-unocss.netlify.app/)和[添加了build配置](https://62a6aa7a34e65100083f0e89--vite-element-plus-unocss.netlify.app/)的区别。
+
+其中按钮样式好了，但是如果同样的自定义在 `src/styles/index.scss` 中的 `:root` 下的主题颜色也失效了。
+
+```css
+:root {
+  --ep-color-primary: pink;
+```
+}
+
+不过这个问题不大，我们通过修改： `src/styles/element/index.scss` 中的颜色就好了。
+
+### 问题
+
+当然现在的问题是如何保持开发环境和生产环境效果一致。那么我还在进一步探索中。
