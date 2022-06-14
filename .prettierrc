@@ -1,5 +1,5 @@
 {
   "$schema": "http://json.schemastore.org/prettierrc",
-  "semi": false,
-  "singleQuote": true
+  "semi": true,
+  "singleQuote": false
 }
