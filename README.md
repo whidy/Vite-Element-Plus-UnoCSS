@@ -32,13 +32,20 @@
 pnpm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/eslint-config-typescript eslint-plugin-vue
 ```
 
-关于项目自动引入后，ESLint出现 `no-undef` 的错误，建议关闭该规则。本项目已关闭~
-
-经研究，ESLint规则无法 `--ignore-path` 多个文件，比如我希望同时忽略 `.gitignore` 和 `.eslintignore` ，似乎无法实现，尝试通过 `--ignore-pattern` 测试可以达到同样效果（参考 `package.json` 的 `script` 的 `lint` 命令）。
-
 相关参考文档：
 
 * [eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#installation)
 * [Linting your TypeScript Codebase](https://typescript-eslint.io/docs/linting/)
 * [eslint-config-typescript for Vue](https://github.com/vuejs/eslint-config-typescript)
 * [Building a Vue3 Typescript Environment with Vite](https://miyauchi.dev/posts/vite-vue3-typescript/)
+
+关于项目自动引入后，ESLint出现 `no-undef` 的错误，建议关闭该规则。本项目已关闭~
+
+经研究，ESLint规则无法 `--ignore-path` 多个文件，比如我希望同时忽略 `.gitignore` 和 `.eslintignore` ，似乎无法实现，尝试通过 `--ignore-pattern` 测试可以达到同样效果（参考 `package.json` 的 `script` 的 `lint` 命令）。
+
+相关参考资料：
+
+* [I get errors from the no-undef rule about global variables not being defined, even though there are no TypeScript errors](https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors)
+* [ESLint - Ignoring Code](https://eslint.org/docs/user-guide/configuring/ignoring-code)
+* ["eslint --ignore-path" should accept multiple file paths](https://github.com/eslint/eslint/issues/9794)
+* [Global module definition for typescript](https://stackoverflow.com/questions/63509978/global-module-definition-for-typescript)
