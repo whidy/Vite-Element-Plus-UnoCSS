@@ -12,6 +12,16 @@
 
 ## 备注
 
+有一些其他的改动，完全根据个人喜好定制，做一些简单的说明。
+
+### CSS Reset
+
 该Demo使用了 `normalize.css` 的reset样式。【[WHY?](https://github.com/whidy/Vite-Element-Plus-UnoCSS/tree/with-tailwindcss-reset)】
 
-> 当然，你必须了解normalize不是传统意义的reset，如果有些地方不满意，你仍然需要reset一下。
+> 当然，你必须了解normalize不是传统意义的reset，如果有些地方不满意，你仍然需要reset一下（比如元素的内外边距，a标签的下划线，列表的style等等）。
+
+### ESLint
+
+个人喜好明明白白的建项目，倒不是说之前sxzz的规则不好，大佬的规则中可以学到很多，然而我还是自己定制了适合自己的规则，想省事的话就不必要折腾了。
+
+![对比，左侧sxzz，右侧定制](./docs/code-compared-eslint.png)
