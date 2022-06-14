@@ -25,3 +25,16 @@
 个人喜好明明白白的建项目，倒不是说之前sxzz的规则不好，大佬的规则中可以学到很多，然而我还是自己定制了适合自己的规则，想省事的话就不必要折腾了。
 
 ![对比，左侧sxzz，右侧定制](./docs/code-compared-eslint.png)
+
+补充说明，需要安装的依赖：
+
+```bash
+pnpm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/eslint-config-typescript eslint-plugin-vue
+```
+
+相关参考文档：
+
+* [eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#installation)
+* [Linting your TypeScript Codebase](https://typescript-eslint.io/docs/linting/)
+* [eslint-config-typescript for Vue](https://github.com/vuejs/eslint-config-typescript)
+* [Building a Vue3 Typescript Environment with Vite](https://miyauchi.dev/posts/vite-vue3-typescript/)
