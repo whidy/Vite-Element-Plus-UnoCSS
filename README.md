@@ -32,6 +32,10 @@
 pnpm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/eslint-config-typescript eslint-plugin-vue
 ```
 
+关于项目自动引入后，ESLint出现 `no-undef` 的错误，建议关闭该规则。本项目已关闭~
+
+经研究，ESLint规则无法 `--ignore-path` 多个文件，比如我希望同时忽略 `.gitignore` 和 `.eslintignore` ，似乎无法实现，尝试通过 `--ignore-pattern` 测试可以达到同样效果（参考 `package.json` 的 `script` 的 `lint` 命令）。
+
 相关参考文档：
 
 * [eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#installation)
