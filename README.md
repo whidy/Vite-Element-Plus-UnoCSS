@@ -12,7 +12,7 @@
 
 ## 备注
 
-该Demo使用了 `Tailwind CSS` 的reset样式。
+该[Demo](https://62a6a9d8892e41000861d9e4--vite-element-plus-unocss.netlify.app/)使用了 `Tailwind CSS` 的reset样式。
 
 开发模式下，暂时未能寻找到引入 `Tailwind CSS` 的 `reset` 后，导致 `el-button` 的样式覆盖问题（同[Vite中ElementPlus和TailwindCSS最佳实践（一）](https://github.com/whidy/elementplus-tailwindcss-best-practice)），因为发现无法控制开发模式下的加载顺序。不过通过修改 `vite.config.ts` 中 `build` 部分达到避免（因为也许不用加也可以）生产环境下 `Element-Plus` 的样式文件在后面。部分配置代码：
 
@@ -37,8 +37,8 @@ build: {
 ```css
 :root {
   --ep-color-primary: pink;
-```
 }
+```
 
 不过这个问题不大，我们通过修改： `src/styles/element/index.scss` 中的颜色就好了。
 
@@ -47,3 +47,11 @@ build: {
 当然现在的问题是如何保持开发环境和生产环境效果一致。那么我还在进一步探索中。
 
 > 当然你完全可以不使用 `Tailwind CSS` 的 `reset` 来避免此问题的发生，这会**省下不少时间**。其他的reset可以参考[UnoCSS Reset](https://uno.antfu.me/?s=guide:reset)，比如个人推荐 `normalize.css` 和 `sanitize.css`
+
+### 补充
+
+【2022年06月16日】
+
+如果是自定义的样式可以研究下[ `layers` ](https://github.com/unocss/unocss#layers)参数试图解决该问题。
+
+该分支源码进行了简单的试验，不过目前尚未找到解决方案。

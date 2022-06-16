@@ -10,7 +10,9 @@ const handleClick2 = () => {
   <el-config-provider namespace="ep">
     <div h-full flex flex-col>
       <h1>
-        这是一个<a href="https://vite-element-plus-unocss.netlify.app/"
+        这是一个<a
+          class="red blue"
+          href="https://vite-element-plus-unocss.netlify.app/"
           >Demo!</a
         >
       </h1>

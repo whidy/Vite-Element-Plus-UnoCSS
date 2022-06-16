@@ -5,7 +5,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
-
 import Unocss from 'unocss/vite'
 import {
   presetAttributify,
@@ -51,10 +50,32 @@ export default defineConfig({
       ],
       dts: path.resolve(pathSrc, 'typings', 'components.d.ts'),
     }),
-
     Unocss({
+      rules: [['red', { color: 'red' }, { layer: 'red' }]],
+      preflights: [
+        {
+          layer: 'blue',
+          /**
+           * 2022年06月16日
+           * I don't know how to use fetch in example as below:
+           * getCSS: async () => (await fetch('my-style.css')).text(),
+           * from: https://github.com/unocss/unocss#layers
+           */
+          getCSS: async () => {
+            const txt = (await import('./src/styles/blue.js')).default
+            return txt
+          },
+        },
+      ],
       presets: [
-        presetUno(),
+        presetUno({
+          // not working?
+          // layers: {
+          //   red: 2,
+          //   blue: 1,
+          // },
+          // sortLayers: ['blue', 'red'],
+        }),
         presetAttributify(),
         presetIcons({
           scale: 1.2,
