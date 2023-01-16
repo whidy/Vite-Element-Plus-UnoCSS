@@ -11,7 +11,8 @@ declare module '@vue/runtime-core' {
     ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElSpace: typeof import('element-plus/es')['ElSpace']
-    Loading: typeof import('element-plus/es')['ElLoadingDirective']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

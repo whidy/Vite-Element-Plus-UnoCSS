@@ -1,7 +1,14 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import App from "./App.vue";
-import "@unocss/reset/normalize.css";
+import router from "./router";
 import "uno.css";
-import "@/styles/index.scss";
+import "@unocss/reset/eric-meyer.css";
+import "@/assets/styles/index.scss";
+
 const app = createApp(App);
+
+app.use(createPinia());
+app.use(router);
+
 app.mount("#app");
