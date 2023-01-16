@@ -16,9 +16,13 @@
 
 ### CSS Reset
 
-该Demo使用了 `normalize.css` 的reset样式。【[WHY?](https://github.com/whidy/Vite-Element-Plus-UnoCSS/tree/with-tailwindcss-reset)】
+~~该Demo使用了 `normalize.css` 的reset样式。【[WHY?](https://github.com/whidy/Vite-Element-Plus-UnoCSS/tree/with-tailwindcss-reset)】~~
 
 > 当然，你必须了解normalize不是传统意义的reset，如果有些地方不满意，你仍然需要reset一下（比如元素的内外边距，a标签的下划线，列表的style等等）。
+
+2023年01月16日
+
+我已修改为reset.css模式，因为我发现大部分项目的设计人员并不能很好的理解或者遵循浏览器自带样式的统一规范，使用了 `normalize.css` 或 `sanitize.css` ，反而还要再进行手动重置，在项目搭建初期，选择好基础样式尤为重要，因为个人原因，调整为传统的样式重置方案，使用 `eric-meyer.css` 或 `tailwind.css` 的reset。
 
 ### ESLint
 
