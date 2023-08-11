@@ -13,6 +13,11 @@ const handleClick2 = () => {
   ElMessageBox.alert("Hello You!", "Boom", {});
 };
 const icon = "github";
+const loading = ref(true);
+
+setTimeout(() => {
+  loading.value = false;
+}, 5000);
 </script>
 
 <template>
@@ -53,8 +58,11 @@ const icon = "github";
       <el-button type="info" @click="handleClick2">测试</el-button>
     </el-button-group>
   </div>
-  <div v-loading="{ text: 'Loading...' }" style="height: 100px">
-    Loading Area
+  <div
+    v-loading="loading"
+    element-loading-text="Loading..."
+    style="height: 100px">
+    Loading Area(5 seconds later will be done.)
   </div>
 </template>
 
