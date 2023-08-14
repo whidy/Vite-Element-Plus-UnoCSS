@@ -2,6 +2,10 @@
 
 ## 更新
 
+2023 年 08 月 14 日
+
+发现如果动态`icon`的时候结合 `group` 也会出现问题，需要“前置定义”，见 `src/views/UnoCSSView.vue` 顶部的说明。
+
 2023 年 08 月 11 日
 
 升级到 `typescript5` ，相关依赖升级。想要了解 `UnoCSS` ，可以看看我这个仓库[UnoCSS-Study-Examples](https://github.com/whidy/UnoCSS-Study-Examples)。

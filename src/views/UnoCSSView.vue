@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 /**
- * icon tricks by Whidy, 2022年06月14日
+ * icon tricks by Whidy, 2023年08月14日
  * here icon list below:
- * i-mdi-github i-mdi-[name]
+ * i-mdi-github group-hover:i-mdi-github
  * 建议保持上面的格式书写，否则不管用哦~（比如你加个逗号就凉凉，因为class里面怎么会有逗号呢）
  */
 
@@ -40,13 +40,17 @@ setTimeout(() => {
           href="https://www.whidy.net/unocss-dynamic-icon-not-show"
           target="_blank">UnoCSS动态图标icon无法显示解决方案</a>
       </p>
-      <a
-        href="https://github.com/whidy/Vite-Element-Plus-UnoCSS"
-        target="_blank"
-        :class="`i-mdi-${icon}`"
-        text-gray-600
-        hover:text-black
-        text-6xl></a>
+      <div class="group flex flex-col items-center border b-solid b-blue">
+        <p>测试group下的icon变化</p>
+        <p>经发现，如果是group的icon，则需要在顶部也“声明”一下<span text-emerald>group-hover:i-mdi-github</span>否则无法识别。</p>
+        <a
+          href="https://github.com/whidy/Vite-Element-Plus-UnoCSS"
+          target="_blank"
+          :class="`i-mdi:account-question group-hover:i-mdi-${icon}`"
+          text-gray-600
+          hover:text-black
+          text-6xl></a>
+      </div>
     </el-space>
     <el-button-group flex justify-center>
       <el-button
